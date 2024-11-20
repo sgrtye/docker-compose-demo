@@ -6,8 +6,8 @@ services:
     command: tunnel run
     network_mode: host
     environment:
-      - TUNNEL_TOKEN: ${TUNNEL_TOKEN}
-      - TUNNEL_TRANSPORT_PROTOCOL: ${TUNNEL_TRANSPORT_PROTOCOL}
-      - TUNNEL_EDGE_IP_VERSION: ${TUNNEL_EDGE_IP_VERSION}
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN}
+      TUNNEL_TRANSPORT_PROTOCOL: ${TUNNEL_TRANSPORT_PROTOCOL}
+      TUNNEL_EDGE_IP_VERSION: ${TUNNEL_EDGE_IP_VERSION}
     env_file:
       - /environment/tunnel-ipv6.env
