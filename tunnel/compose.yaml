@@ -1,6 +1,6 @@
 services:
-  tunnel-ipv4:
-    container_name: tunnel-ipv4
+  tunnel:
+    container_name: tunnel
     image: cloudflare/cloudflared:latest
     restart: unless-stopped
     command: tunnel run
