@@ -8,4 +8,4 @@ services:
     env_file:
       - /environment/tunnel-ipv6.env
     volumes:
-      - ${DOCKER_SOCK:-/var/run/docker.sock}:/var/run/docker.sock
+      - ${DOCKER_SOCK}:/var/run/docker.sock
