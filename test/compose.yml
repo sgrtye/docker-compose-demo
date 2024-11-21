@@ -1,0 +1,12 @@
+services:
+  glances:
+    container_name: glances
+    image: nicolargo/glances:latest-full
+    restart: unless-stopped
+    pid: host
+    network_mode: host
+    volumes:
+      - ${DOCKER_SOCK}:/var/run/docker.sock:ro
+      - ${GLANCES_CONFIG_PATH}:/glances.conf:ro
+    environment:
+      - GLANCES_OPT=${GLANCES_OPT}
